@@ -1,11 +1,9 @@
-from flask import *
+from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
-#app.run(host='0.0.0.0')
-
-@app.route('/')
-def index():
+@app.route('/index', methods=['GET', 'POST'])
+def lionel(): 
     return render_template('hello.html')
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run()
